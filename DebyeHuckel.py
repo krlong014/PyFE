@@ -1,6 +1,6 @@
 from ElementIntegration import *
 from TriangleMeshReader import *
-from LoadableMesh import *
+from LoadableMesh2D import *
 import scipy.sparse.linalg as spla
 import numpy.linalg as la
 import numpy as np
@@ -78,7 +78,7 @@ def DiscretizeDH(mesh, loadFunc, beta):
                 A[ globalRow,globalCol ] += localA[localRow,localCol]
 
 
-    return (A,b)
+    return (A.tocsr(),b)
 
     # # We'll solve using the super LU sparse direct solver.
     # factorization = spla.splu(A)
