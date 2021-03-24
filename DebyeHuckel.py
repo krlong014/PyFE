@@ -1,6 +1,6 @@
 from ElementIntegration import *
 from TriangleMeshReader import *
-from LoadableMesh import *
+from LoadableMesh2D import *
 import scipy.sparse.linalg as spla
 import numpy.linalg as la
 import numpy as np
